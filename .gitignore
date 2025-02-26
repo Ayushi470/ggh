@@ -51,3 +51,9 @@ poetry.lock
 .upm/
 .config/
 .cache/
+.pythonlibs/
+
+# Temporary files
+*.zip
+clean_project.zip
+project.zip
