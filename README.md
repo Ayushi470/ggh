@@ -26,29 +26,35 @@ Make sure to set up the following environment variables:
 - `GEMINI_API_KEY`: Google Gemini API key for chat functionality
 - `SESSION_SECRET`: Secret key for Flask sessions
 
-## Project Structure
+## Required Dependencies
 
-- `/static` - CSS and JavaScript files
-- `/templates` - HTML templates
-- `/models.py` - Database models
-- `/routes.py` - Application routes
-- `/ocr_processor.py` - OCR and text processing logic
+```bash
+# Core Web Framework
+flask>=3.1.0
+flask-sqlalchemy>=3.1.1
+flask-login>=0.6.3
+flask-wtf>=1.2.2
+gunicorn>=23.0.0
 
-## Features:
+# Database
+psycopg2-binary>=2.9.10
+sqlalchemy>=2.0.38
 
-1. **OCR Processing**
-   - Upload bill images
-   - Extract text using Tesseract
-   - Intelligent data extraction for amounts, dates, and items
+# OCR and Image Processing
+pytesseract>=0.3.13
+pillow>=11.1.0
 
-2. **Bill Management**
-   - Store processed bills
-   - View bill history
-   - Export bills as CSV
+# NLP and Text Processing
+spacy>=3.8.4
+numpy>=2.2.3
 
-3. **Chat Interface**
-   - AI-powered responses using Google Gemini
-   - Context-aware interactions
+# Additional Utilities
+email-validator>=2.2.0
+flask-pymongo>=3.0.1
+google-generativeai>=0.8.4
+werkzeug>=3.1.3
+trafilatura>=2.0.0
+```
 
 ## Setup Instructions
 
